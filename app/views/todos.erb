@@ -1,0 +1,27 @@
+<%# this is an embedded ruby file that is fully a html file and handles ruby code
+templating <% %> <%#for blocks that dont o/p data
+<%# <%= %> <%#for blocks that o/p data %>
+<%# After creating all your elements then add a route to your controller as a get to access the file %>
+
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Hello ToDo App</title>
+    </head>
+    <body>
+        <p>Please Enter Your Tasks For Today</p>
+        <%# // looping through every single todo that we have %>
+
+        <ol type='1'>
+            <% @todos.each do |todo| %>
+
+            <li> <%= todo.title%> >> <%= todo.description %> >> <%= todo.status%> </li>
+
+            <% end %>
+
+        </ol>
+
+    </body>
+
+</html>
