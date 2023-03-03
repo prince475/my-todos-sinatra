@@ -155,7 +155,7 @@ Database schema definitions.
 This repository is distributed under the MIT License
 
 ```markdown
-Copyright 2023 Ian Okumu
+Copyright 2023 prince Daniel
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”),
 to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software,
@@ -171,3 +171,40 @@ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMA
 This repository is maintained by:
 
 - [Prince Daniel](https://github.com/prince475)
+
+
+
+<div class="mt-5">
+    <h2>Here are some of your tasks</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">#Title</th>
+                <th scope="col">#Description</th>
+                <th scope="col">#Created</th>
+                <th scope="col">#Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @todos.each do|x| %>
+            <tr>
+                <th scope="row"><%= @i %></th>
+                <td><%= x[:todo].title %></td>
+                <td><%= x[:todo].description %></td>
+                <td><%= x[:todo].createdAt %></td>
+                <td>
+                    <span class="badge <%= x[:badge] %>">
+                        <%= x[:todo].status %>
+                    </span>
+                </td>
+            </tr>
+            <% @i += %>
+            <% end%>
+        </tbody>
+    </table>
+
+</div>
+
+
