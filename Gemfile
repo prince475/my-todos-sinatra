@@ -19,7 +19,7 @@ gem 'bcrypt', '~> 3.1', '>= 3.1.18'
 
 gem 'puma', '~> 6.1'
 
-gem 'require_all', '~> 3.3'
+gem 'require_all', '~> 3.0'
 
 
 group :development do
